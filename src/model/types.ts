@@ -1,4 +1,5 @@
-import internal from "stream";
+import React from "react";
+
 
 export interface News {
   status: string;
@@ -21,6 +22,11 @@ export interface Articles {
 export interface Source {
   id: string;
   name: string;
+}
+
+export interface Category {
+  name: string
+  icon: React.ReactElement
 }
 
 

@@ -8,6 +8,7 @@ import SearchIcon from "../assets/icons/SearchIcon";
 import MenuIcon from "../assets/icons/Bars3Icon";
 import menuIcon from "../assets/icons/Bars3Icon.svg";
 import RelatedNews from '../components/news/RelatedNews';
+import NewsChipCategory from '../components/news/NewsChipCategory';
 const Home = () => {
   const onToggleLikeButton = () => { };
   const onSelectNews = () => { };
@@ -44,6 +45,7 @@ export const NewsList: React.FC<NewsListProps> = (props) => {
   const { newsFeed, isFavourite, onArticleTap, onToggleFavourite } = props;
 
   return <>
+    <NewsChipCategory/>
     {newsFeed.popularNews.length > 0 && <PopularNewsSection isFavourite={isFavourite} onFouriteToggle={onToggleFavourite} newsDataList={newsFeed.popularNews} />}
     {newsFeed.normalNews.map((news, index) => <div key={index}>
       {newsFeed.normalNews.length > 0 && <NormalNewsSection navigateToArticle={onArticleTap} onToggleFavourite={() => { }} newsData={news} />}
