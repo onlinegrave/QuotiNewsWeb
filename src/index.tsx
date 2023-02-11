@@ -5,30 +5,10 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { store } from './store';
 import AppRouter from './navigation/_routes';
-import {IntlProvider, FormattedMessage, FormattedNumber} from 'react-intl'
-
-const messagesInFrench = {
-  myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
-}
-
-export default function App() {
-  return (
-    <IntlProvider messages={messagesInFrench} locale="fr" defaultLocale="en">
-      <p>
-        <FormattedMessage
-          id="myMessage"
-          defaultMessage="Today is {ts, date, ::yyyyMMdd}"
-          values={{ts: Date.now()}}
-        />
-        <br />
-        <FormattedNumber value={19} style="currency" currency="EUR" />
-      </p>
-    </IntlProvider>
-  )
-}
-
+import { IntlProvider, FormattedMessage, FormattedNumber } from 'react-intl'
 
 const firebaseConfig = {
   apiKey: "AIzaSyApq02EYpr7xL3TNiv00ErILI54Z2iERYU",
@@ -51,10 +31,17 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <AppRouter />
+      <IntlProvider locale={navigator.language}>
+        <AppRouter />
+      </IntlProvider>
     </Provider>
   </React.StrictMode >
 );
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.unregister();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
