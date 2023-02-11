@@ -1,4 +1,5 @@
-const EngineeringIcon = () => <svg height="24"
+import React from 'react';
+const EngineeringIcon:React.FC = () => <svg height="24"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"

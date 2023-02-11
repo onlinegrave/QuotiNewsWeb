@@ -1,4 +1,5 @@
-const BooksIcon = () =>
+import React from 'react';
+const BooksIcon:React.FC = () =>
     <svg height="24"
         viewBox="0 0 24 24"
         fill="none"

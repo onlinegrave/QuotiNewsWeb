@@ -3,9 +3,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { News } from "../model/types";
 import buildConfig from "../util/constant";
 
-enum SortBy { "relevancy", "popularity", "publishedAt" };
-enum Language { "ar","de","en","es","fr","he","it","nl","no","pt","ru","sv","ud","zh"}
-enum SearchIn { "title", "description", "content"}
+enum SortBy { "relevancy", "popularity", "publishedAt" }
+enum Language { "ar", "de", "en", "es", "fr", "he", "it", "nl", "no", "pt", "ru", "sv", "ud", "zh" }
+enum SearchIn { "title", "description", "content" }
 
 // Define a service using a base URL and expected endpoints
 export const quotiNewsApi = createApi({
@@ -17,7 +17,7 @@ export const quotiNewsApi = createApi({
     prepareHeaders: (headers, { getState }) => {
       headers.set('Access-Control-Allow-Origin', '*')
       // headers.set('X-Api-Key',buildConfig.API_KEY)
-      headers.set('X-Api-Key',"883fcfd667104a34ac74c1827fb419e4")
+      headers.set('X-Api-Key', "883fcfd667104a34ac74c1827fb419e4")
       return headers;
     },
   }),
@@ -31,7 +31,7 @@ export const quotiNewsApi = createApi({
     getNewsByCountry: builder.query<News, string>({
       query: (name) => `everything?country=${name}`,
     }),
-    getNewsByCountryAndCategory: builder.query<News, {country: string, category: string}>({
+    getNewsByCountryAndCategory: builder.query<News, { country: string, category: string }>({
       query: (name) => `everything?category=${name.category}country=${name.country}`,
     }),
   }),
