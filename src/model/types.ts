@@ -26,7 +26,7 @@ export interface Source {
 
 export interface Category {
   name: string
-  icon: React.ReactElement
+  icon: JSX.Element
 }
 
 

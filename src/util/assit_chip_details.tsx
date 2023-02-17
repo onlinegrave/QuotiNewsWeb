@@ -5,15 +5,13 @@ import FashionIcon from "../assets/icons/FashionIcon";
 import HealthIcon from "../assets/icons/HealthIcon";
 import GovtIcon from "../assets/icons/GovtIcon";
 import StockChartIcon from "../assets/icons/StockChartIcon";
-export const chipCategory:() =>Category[] = () =>
-   [{name: "Tech", icon: <EngineeringIcon/> },
-   {name: "Edu", icon: <BooksIcon/>},
-   {name: "Govt", icon: <GovtIcon/>},
-   {name: "Fashion", icon: <FashionIcon/>},
-   {name: "Health", icon: <HealthIcon/>},
-   {name: "Econs", icon: <StockChartIcon/>},
 
-
-
-  ];
-
+export const chipCategory: () => Category[] = () =>
+   [{ name: "Business", icon: <EngineeringIcon /> },
+   { name: "Entertainment", icon: <BooksIcon /> },
+   { name: "General", icon: <GovtIcon /> },
+   { name: "Science", icon: <FashionIcon /> },
+   { name: "Sports", icon: <HealthIcon /> },
+   { name: "Health", icon: <StockChartIcon /> },
+   { name: "Technology", icon: <StockChartIcon /> },
+   ];
