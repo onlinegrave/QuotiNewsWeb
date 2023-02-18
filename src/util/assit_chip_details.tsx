@@ -1,3 +1,4 @@
+import React from 'react';
 import { Category } from "../model/types";
 import EngineeringIcon from "../assets/icons/EngineeringIcon";
 import BooksIcon from "../assets/icons/BooksIcon";

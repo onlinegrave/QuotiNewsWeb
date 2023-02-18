@@ -15,7 +15,9 @@ const PopularNewsSection: React.FC<PopularNewsSectionProps> = ({ newsDataList, i
     <div className='py-2 p-3'>Popular News for you</div>
     <div className='flex flex-nowrap flex-grow gap-8 overflow-auto px-4'>
       {newsDataList.map((news, index) => <div key={news.toString().concat(index.toString())}>
-        <PopularNews newsData={news} iconClicked={() => { }} isIconBookmarked={false} />
+        <PopularNews newsData={news} iconClicked={() => {
+          //TODO
+        }} isIconBookmarked={false} />
       </div>)}
     </div>
 

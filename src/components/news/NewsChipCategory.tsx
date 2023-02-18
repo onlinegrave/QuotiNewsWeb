@@ -1,3 +1,4 @@
+import React from 'react';
 import EngineeringIcon from "../../assets/icons/EngineeringIcon";
 import { chipCategory } from "../../util/assit_chip_details";
 import NewsChip from "./NewsChip";

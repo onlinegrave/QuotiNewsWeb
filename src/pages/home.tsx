@@ -11,11 +11,19 @@ import RelatedNews from '../components/news/RelatedNews';
 import NewsChipCategory from '../components/news/NewsChipCategory';
 import NewsFeedPage from '../components/NewsFeed';
 const Home = () => {
-  const onToggleLikeButton = () => { };
-  const onSelectNews = () => { };
+  const onToggleLikeButton = () => {
+    //TODO
+  };
+  const onSelectNews = () => {
+    //TODO
+  };
   const showTopAppBar = true;
-  const onRefreshNews = () => { };
-  const onErrorDismissed = () => { };
+  const onRefreshNews = () => {
+    //TODO
+  };
+  const onErrorDismissed = () => {
+    //TODO
+  };
   const isFavourite = new Set<string>();
 
 
@@ -50,7 +58,9 @@ export const NewsList: React.FC<NewsListProps> = (props) => {
     <NewsChipCategory />
     {newsFeed.popularNews.length > 0 && <PopularNewsSection isFavourite={isFavourite} onFouriteToggle={onToggleFavourite} newsDataList={newsFeed.popularNews} />}
     {newsFeed.normalNews.map((news, index) => <div key={index}>
-      {newsFeed.normalNews.length > 0 && <NormalNewsSection navigateToArticle={onArticleTap} onToggleFavourite={() => { }} newsData={news} />}
+      {newsFeed.normalNews.length > 0 && <NormalNewsSection navigateToArticle={onArticleTap} onToggleFavourite={() => {
+        //TODO
+      }} newsData={news} />}
       {(index + 1) % 6 === 0 && <RelatedNews newsData={news} />}
     </div>
     )}
