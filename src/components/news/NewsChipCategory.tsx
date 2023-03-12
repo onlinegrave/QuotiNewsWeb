@@ -7,7 +7,7 @@ const NewsChipCategory = () => {
   return <>
     <div className="flex gap-2 px-4 overflow-x-auto">
       {chipCategory().map(c => <div key={c.name}>
-        <NewsChip label={<div>{c.name}</div>} isChipEnabled={false} onClick={() => { }} leadingIcon={c.icon} trailingIcon={<div></div>} />
+        <NewsChip label={<div>{c.name}</div>} isChipEnabled={false}  leadingIcon={c.icon} trailingIcon={<div></div>} />
       </div>)}
     </div>
   </>

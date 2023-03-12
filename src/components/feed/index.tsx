@@ -5,9 +5,8 @@ import { RootState } from '../../store';
 import { Category, CountryCode, LanguageCode } from '../../services/types';
 import ShimmerCard from '../shimmer/ShimmerCard';
 
-interface FeedProps {
-
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface FeedProps {}
 
 const Feed: React.FC<FeedProps> = (props) => {
   const category = useSelector((state: RootState) => state.app.category);

@@ -39,7 +39,7 @@ export const quotiNewsApi = createApi({
   baseQuery: fetchBaseQuery({
     mode: "cors",
     credentials: "same-origin",
-    baseUrl: "http://localhost:3001/v2",
+    baseUrl: process.env.REACT_APP_SERVER_URL+"/v2",
     prepareHeaders: (headers, { getState }) => {
       // headers.set('X-Api-Key',buildConfig.API_KEY)
       return headers;

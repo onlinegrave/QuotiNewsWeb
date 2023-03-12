@@ -1,7 +1,7 @@
 import React from 'react';
 interface NewsChipProps {
   isChipEnabled: boolean
-  onClick: () => void
+  onClick?: () => void
   label: JSX.Element
   leadingIcon: JSX.Element
   trailingIcon: JSX.Element

@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { store } from './store';
 import AppRouter from './navigation/_routes';
-import { IntlProvider, FormattedMessage, FormattedNumber } from 'react-intl'
+import { IntlProvider, FormattedMessage, FormattedNumber } from 'react-intl';
 
 const firebaseConfig = {
   apiKey: "AIzaSyApq02EYpr7xL3TNiv00ErILI54Z2iERYU",
